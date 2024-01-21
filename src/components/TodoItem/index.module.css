@@ -1,0 +1,44 @@
+.item {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: calc(1rem + 10px) 1rem 1rem 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+
+  :disabled {
+    color: black;
+  }
+
+  .title {
+    background-color: white;
+    font-size: 1.2rem;
+  }
+
+  .editableTitle {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .diseditableTitle {
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+
+  .buttonWrapper {
+    display: flex;
+    width: 100%;
+    .button {
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 5px;
+      padding: 10px 10px 10px 10px;
+      border-radius: 5px;
+    }
+    .button:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+}
+.item:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

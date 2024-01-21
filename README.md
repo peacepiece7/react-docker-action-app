@@ -22,3 +22,7 @@ https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteAccessPermissionsRe
     ]
 }
 ```
+
+# cloudFront
+
+초간단 그냥 만들고 S3 버킷 선택 후 설정 읽고 적용하면 끗

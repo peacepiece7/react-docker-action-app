@@ -1,30 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "outDir": "./dist",
+    "target": "es5",
     "module": "ESNext",
-    "skipLibCheck": true,
-    "baseUrl": "src",
-    "paths": {
-      "@/*": ["*"]
-    },
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
+    // "lib": ["dom", "dom.iterable", "esnext"], target에서 추천하는 lib을 사용할거라서 주석처리했습니다.
+    "allowJs": true, // .js 사용을 허용합니다.
+    "skipLibCheck": true, // .d.ts 파일은 타입 체크를 스킵합니다.
+    // "allowImportingTsExtensions": true, // ts확장자를 명시적으로 작성해도 import할 수 있습니다. // "noEmit": true,
+    "esModuleInterop": true, // CommonJS 모듈 importing을 쉽게 만들어줍니다. allowSyntheticDefaultImports가 활성화됩니다.
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "forceConsistentCasingInFileNames": true, // import시 대소문자를 구분합니다.
+    "moduleResolution": "node", // 모듈 위치를 찾아가는 전략을 설정합니다. 비-상대적 import시 node_modules를 찾아갑니다.
+    "resolveJsonModule": true, // json파일 importing을 활성화합니다.
+    "isolatedModules": true, // 파일을 모듈로 취급합니다. 파일 간의 전역 변수를 공유할 수 없습니다.
+    "baseUrl": "./", // 절대경로를 설정합니다.
+    "paths": { "@/*": ["src/*"] } // alias가 있다면 설정합니다.
   },
-
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src", "lagacy/TodoModal"]
 }
